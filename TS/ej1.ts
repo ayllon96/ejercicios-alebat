@@ -28,7 +28,7 @@ const firstBird: Bird = {
   canFly: true,
 };
 
-const pfirstDog: Dog = {
+const firstDog: Dog = {
   name: "Firuláis",
   canEat: true,
   canDrink: true,
