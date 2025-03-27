@@ -1,8 +1,3 @@
-/*
-Ej1.
-Con type se podría hacer lo mismo pero en este caso, para aprovechar la herencia 
-es mejor usar interfaces por su semántica
-*/
 interface Animal {
   name: string;
   canEat: boolean;
@@ -19,16 +14,13 @@ interface Dog extends Animal {
   age: number;
 }
 
-//Creamos una interfaz independiente porque no comparte propiedades con las anteriores.
-interface Cat {
-  name: string;
-  color: string;
-  canSleep: boolean;
-}
+type Cat = Pick<Animal, "name" | "canSleep"> & { color: string };
+
+type Snake = Omit<Animal, "name">;
 
 type dogRace = "Husky" | "Labrador" | "Chucho";
 
-const pajaro: Bird = {
+const firstBird: Bird = {
   name: "Piolin",
   canEat: true,
   canDrink: true,
@@ -36,17 +28,23 @@ const pajaro: Bird = {
   canFly: true,
 };
 
-const perro: Dog = {
+const pfirstDog: Dog = {
   name: "Firuláis",
   canEat: true,
   canDrink: true,
   canSleep: true,
-  race: "Labrador", //Si no se pone una raza válida, dará error
+  race: "Labrador",
   age: 3,
 };
 
-const gato: Cat = {
-  name: "Garfield",
+const firstCat: Cat = {
+  name: "Calcetines",
   canSleep: true,
-  color: "Naranja", //Si se pone una propiedad que no está en la interfaz, dará error
+  color: "Naranja",
+};
+
+const firstSnake: Snake = {
+  canEat: true,
+  canDrink: true,
+  canSleep: true,
 };
