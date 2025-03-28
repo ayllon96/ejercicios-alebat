@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  background-color: #909090;
+}
+
+.body__h1 {
+  color: #0000ff;
+  font-size: 1.75em;
+}
+
+.body__h2 {
+  color: #ffa500;
+  font-size: 1.4em;
+}
+
+.body__h3 {
+  color: #a52a2a;
+  font-size: 1em;
+}
+
+.body__button {
+  color: #800080;
+  font-size: 1.2em;
+}
+.body__button:hover {
+  color: #ffa500;
+  transition: all 0.3s;
+  transform: scale(1.2);
+}
+
+footer {
+  color: #ffffff;
+  font-size: 1em;
+  background-color: #000000;
+  padding: 1em;
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles3.css.map */

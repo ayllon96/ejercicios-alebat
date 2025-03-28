@@ -1,0 +1,79 @@
+@mixin flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body {
+  @include flexbox;
+  height: 100vh;
+  margin: 0;
+  background-color: #909090;
+}
+
+$colors: (
+  "red": #ff0000,
+  "green": #00ff00,
+  "blue": #0000ff,
+  "yellow": #ffff00,
+  "purple": #800080,
+  "orange": #ffa500,
+  "black": #000000,
+  "white": #ffffff,
+  "grey": #808080,
+  "brown": #a52a2a,
+  "pink": #ffc0cb,
+);
+
+$font-sizes: (
+  "small": 1em,
+  "medium": 1.2em,
+  "large": 1.4em,
+  "x-large": 1.6em,
+  "xx-large": 1.75em,
+);
+
+$transitions: (
+  "fast": 0.3s,
+  "super-fast": 0.1s,
+  "normal": 0.5s,
+  "slow": 1s,
+  "super-slow": 2s,
+);
+
+h1 {
+  color: map-get($colors, "blue");
+  font-size: map-get($font-sizes, "xx-large");
+}
+
+h2 {
+  color: map-get($colors, "orange");
+  font-size: map-get($font-sizes, "large");
+}
+
+h3 {
+  color: map-get($colors, "brown");
+  font-size: map-get($font-sizes, "small");
+}
+
+button {
+  color: map-get($colors, "purple");
+  font-size: map-get($font-sizes, "medium");
+
+  &:hover {
+    color: map-get($colors, "orange");
+    transition: all map-get($transitions, "fast");
+    transform: scale(1.2);
+  }
+}
+
+footer {
+  color: map-get($colors, "white");
+  font-size: map-get($font-sizes, "small");
+  background-color: #000000;
+  padding: 1em;
+  margin-top: auto;
+  width: 100%;
+  text-align: center;
+}

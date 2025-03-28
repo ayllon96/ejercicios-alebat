@@ -1,0 +1,26 @@
+h1 {
+  color: #ff0000;
+  font-size: 1.75em;
+}
+
+h2 {
+  color: #ffc0cb;
+  font-size: 1.4em;
+}
+
+h3 {
+  color: #a52a2a;
+  font-size: 1em;
+}
+
+button {
+  color: #800080;
+  font-size: 1.2em;
+}
+button:hover {
+  color: #ffa500;
+  transition: all 0.3s;
+  transform: scale(1.2);
+}
+
+/*# sourceMappingURL=styles.css.map */
